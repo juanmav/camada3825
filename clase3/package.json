@@ -1,0 +1,18 @@
+{
+  "name": "clase3",
+  "version": "0.0.1",
+  "description": "Clase 3 camada 3825",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "coderhouse",
+    "react",
+    "express",
+    "node"
+  ],
+  "author": "Camada3825",
+  "license": "MIT"
+}
