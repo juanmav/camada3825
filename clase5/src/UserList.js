@@ -1,5 +1,6 @@
 import React from 'react';
 import users from './userdata.js';
+import UserDetail from './UserDetail';
 
 
 class UserList extends React.Component {
@@ -11,21 +12,20 @@ class UserList extends React.Component {
     render(){
         return(
             <div style={{ marginLeft: '10px', marginRight: '10px'}}>
-
+                <hr/>
+                La ficha del primero de la lista es:
+                <UserDetail detail={users[0]}/>
                 <hr/>
                 Listado de usuarios!
-                <lu>
+                <div>
                     {
-                        users.map(u => {
+                        users.map((u, index) => {
                             return (
-                                <li>
-                                    {u.name} - {u.email} <br/>
-                                    { u.company.name }
-                                </li>
+                                <UserDetail detail={u} key={index}/>
                             );
                         })
                     }
-                </lu>
+                </div>
                 <hr/>
             </div>
         )
