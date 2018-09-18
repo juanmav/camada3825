@@ -7,3 +7,5 @@ A
 callbacks.js,7/6/765c7f7e73e13e9fa9da1d509a8a9d09a5e1d258
 ;
 promises.js,5/b/5be23997df924f8b4bbcd6a7064fe0719a8b7385
+D
+resolucionDesafio.js,2/5/252efeddf003b520bd5b2df52854a785aa653ecb
