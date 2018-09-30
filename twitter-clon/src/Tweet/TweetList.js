@@ -1,6 +1,6 @@
 import React from 'react';
-import mockdata from './mockdata';
-
+import TweetRow from './TweetRow';
+import tweetServices from '../services/tweetservice';
 
 class TweetList extends React.Component {
 
@@ -9,13 +9,39 @@ class TweetList extends React.Component {
     // 2. Hacer el punto uno un componente TweetRow.
 
     constructor(props){
-        super(props)
+        super(props);
+        this.state = {
+            tweets : []
+        }
+    }
+
+    // Agregar un boton "Tweetear!" que me lleve al formulario del tweet.
+    // window.location.href = '/tweetform'
+
+    tweetear = () => {
+        window.location.href = '/tweetform'
+    };
+
+    componentDidMount(){
+        tweetServices
+            .getTweetList()
+            .then(tweets => {
+                this.setState( { tweets: tweets });
+            })
     }
 
     render() {
+        console.log(this.state.tweets);
         return (
             <div>
-                TweetList!
+                <button onClick={this.tweetear}> Tweetear!!!! </button>
+                {
+                    this.state.tweets.map( t => {
+                        return (
+                            <TweetRow {...t}/>
+                        )
+                    })
+                }
             </div>
         )
     }

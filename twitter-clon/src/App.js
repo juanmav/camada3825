@@ -7,6 +7,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './Layout/Header';
 import Login from "./Login/Login";
 import TweetList from "./Tweet/TweetList";
+import TweetForm from "./Tweet/TweetForm";
 
 class App extends Component {
     // Si o si hay que estar logueado para ver los tweets.
@@ -18,6 +19,8 @@ class App extends Component {
                     <main className="App-intro">
                         <Route path={"/"} component={Login} exact={true}/>
                         <Route path={"/tweetlist"} component={TweetList} exact={true}/>
+                        <Route path={"/tweetform"} component={TweetForm} exact={true}/>
+
                         {
                             // Login /
                             // Tweet List /tweetlist

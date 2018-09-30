@@ -5,7 +5,41 @@ const mockdata = [
         author: {
             id: 1,
             username: 'Juancito'
-        }
+        },
+        comments : [
+            {
+                id: 1-1,
+                message: 'Hola que hace!!!!',
+                author: {
+                    id: 2,
+                    username: 'Pedrito'
+                },
+            },
+            {
+                id: 1-1,
+                message: 'Gatooo',
+                author: {
+                    id: 2,
+                    username: 'Pedrito'
+                },
+            },
+            {
+                id: 1-1,
+                message: 'Hola que hace!!!!',
+                author: {
+                    id: 2,
+                    username: 'Pedrito'
+                },
+            },
+            {
+                id: 1-1,
+                message: 'Gatooo',
+                author: {
+                    id: 2,
+                    username: 'Pedrito'
+                },
+            }
+        ]
     },
     {
         id: 2,
@@ -13,7 +47,8 @@ const mockdata = [
         author: {
             id: 1,
             username: 'Juancito'
-        }
+        },
+        comments : []
     },
     {
         id: 3,
@@ -21,7 +56,8 @@ const mockdata = [
         author: {
             id: 2,
             username: 'Pedrito'
-        }
+        },
+        comments : []
     }
 ];
 
