@@ -25,7 +25,13 @@ class TweetRow extends React.Component {
         })
     };
 
+    viewAll = () => {
+        window.location.href = '/tweetdetail/' + this.props.id;
+    };
+
     render(){
+
+        // Agregar navegacion a tweet detail.
         return(
             <div>
                 <h1>{this.props.message}></h1>
@@ -35,6 +41,7 @@ class TweetRow extends React.Component {
                 <button style={{color: 'blue'}} onClick={this.viewMore}>
                     { this.state.view ? 'Ver menos' : 'Ver mas'}
                 </button>
+                <button onClick={this.viewAll}> Ver TODO</button>
 
                 {
                     this.state.view ?

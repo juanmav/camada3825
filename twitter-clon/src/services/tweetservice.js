@@ -10,6 +10,12 @@ function getTweetList(){
     return Promise.resolve(mockdata);
 }
 
+function getTweetById(id){
+    // fetch(urlbacken).then(....)
+    let tweet = mockdata.find( t => t.id == id);
+    return Promise.resolve(tweet);
+}
+
 const deleteTweet = (id) => {
 
 };
@@ -18,5 +24,6 @@ const deleteTweet = (id) => {
 export default {
     createTweet,
     getTweetList,
-    deleteTweet
+    deleteTweet,
+    getTweetById
 }
